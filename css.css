@@ -5,12 +5,12 @@
 
 /* Define variables in the :root */
  :root {
-   --contrast: lime;
-   --backgr: #000;
+   --contrast: ;
+   --backgr: ;
  }
 
 /* Use your variables on elements */
  main {
-   color: var(--contrast);
-   background-color: var(--backgr);
+   color: var();
+   background-color: var();
  }
