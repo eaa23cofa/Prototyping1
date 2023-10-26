@@ -1,0 +1,16 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+/* Define variables in the :root */
+ :root {
+   --contrast: lime;
+   --backgr: #000;
+ }
+
+/* Use your variables on elements */
+ main {
+   color: var(--contrast);
+   background-color: var(--backgr);
+ }
