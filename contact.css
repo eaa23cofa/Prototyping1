@@ -1,0 +1,94 @@
+/*CONTENT*/
+.content {
+    display: flex;
+    justify-content: center; 
+}
+
+/*IMAGE CAPTION*/
+#caption {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*EMERGENCY BUTTON*/
+.emergencyButton {
+    padding: 16px 25px; /* Adjust padding to control button size */
+    background-color: #CCDDFF; /* Button background color */
+    color: black; /* Text color */
+    border: 2px solid #CCDDFF; /* border */
+    border-radius: 35px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 20px; /* Font size */
+    position: absolute;
+    left: 0;
+}
+
+/*ALIGNMENTS*/
+.left-items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+}
+
+.right-items {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.sameline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+/*TOP BAR*/
+header {
+    background-color: #003B6E; /* Background color for the header */
+    color: #fff; /* Text color for the header */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 100px; /* Add margin to separate logo and text */
+}
+
+.text h1 {
+    margin: 0;
+    flex-grow: 1; /* Allow the h1 to grow and take up remaining space */
+}
+
+.weather, .date-time {
+    font-size: 16px;
+}
+
+/*FONT*/
+@font-face {
+    font-family: 'Poppins';
+    src: url('path/to/poppins.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*ALIGNMENT TITLE SECTION*/
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.backButton {
+    position: absolute;
+    left: 0;
+}
+
+
+

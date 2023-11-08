@@ -1,0 +1,132 @@
+/*TOP BAR*/
+header {
+    background-color: #003B6E; /* Background color for the header */
+    color: #fff; /* Text color for the header */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px; /* Add margin to separate logo and text */
+}
+
+.text h1 {
+    margin: 0;
+    flex-grow: 1; /* Allow the h1 to grow and take up remaining space */
+}
+
+.weather, .date-time {
+    font-size: 16px;
+}
+
+/*FONT*/
+@font-face {
+    font-family: 'Poppins';
+    src: url('path/to/poppins.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*CONTENT COMPLAINT PAGE*/
+.contentComplaint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.qrcode img {
+    width: 200px;
+    height: 200px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.p {
+    padding: 10px 40px; /* Adjust padding to control button size */
+    background-color: white; /* Button background color */
+    color: black; /* Text color */
+    border: 1px solid black; /* border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 20px; /* Font size */
+}
+
+/*SUBMIT BUTTON*/
+.submitButton {
+    padding: 10px 15px; /* Adjust padding to control button size */
+    background-color: #CCDDFF; /* Button background color */
+    color: black; /* Text color */
+    border: 2px solid #CCDDFF; /* border */
+    border-radius: 35px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 20px; /* Font size */
+}
+
+/*SUCCESS PAGE*/
+.success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ALIGNMENT TITLE SECTION*/
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.backButton {
+    position: absolute;
+    left: 0;
+}
+
+/*FORM STYLE*/
+input {
+    padding: 10px 20px; /* Adjust padding to control button size */
+    background-color: white; /* Button background color */
+    color: black; /* Text color */
+    border: 1px solid ; /* border */
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 20px; /* Font size */
+}
+
+.center-form {
+    width: 300px;
+    margin: 0;
+    text-align: left; /* Align form text to the left */
+}
+
+.center-form label, .center-form input, .center-form textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.center-form input[type="checkbox"] {
+    display: inline;
+    margin-right: 5px;
+}
+
+/*ANONYMOUS OPTION*/
+.sameline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
