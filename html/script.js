@@ -1,3 +1,26 @@
+//redirects to time reservation when clicking a button
+document.querySelectorAll(".grid-item").forEach(function(element) {
+    element.onclick = function() {
+        location.href = "reservation-confirmation.html"
+    }
+})
+//choose and reserve a washing machine
+document.querySelectorAll(".reserve").forEach(function(element) {
+    element.addEventListener('click', function() {
+        this.classList.toggle("reserved")
+
+        if (this.textContent === "RESERVE") {
+            this.textContent = "RESERVED";
+        } else {
+            this.textContent = "RESERVE";
+        }
+    })
+})
+//confirm and go to succes.html
+document.getElementById('confirm').addEventListener('click', function() {
+    window.location.href = "success.html"
+});
+
 // ---------- confirmation modal
 const modal = document.querySelector(".confirmation-modal")
 const openBtn = document.querySelector(".reserve-now")
@@ -14,17 +37,16 @@ backBtn.onclick = function() {
 }
 //close modal when clicking outside it
 window.addEventListener('click', function(event) {
-    if (event.target === modal) (
+    if (event.target === modal) {
         modal.classList.toggle('hidden')
-    )
+    }
 })
 //confirm and go to succes.html
-confirmBtn.addEventListener("click", function() {
+confirmBtn.addEventListener('click', function() {
     window.location.href = "success.html"
 });
 
 // ---------- Screensaver
-
 function updateDateTime() {
     const now = new Date();
 
@@ -50,35 +72,28 @@ function displayFlex() {
 }
 function activateScreensaver() {
     updateDateTime();
-    console.log("Activating screensaver"); // Debugging line
     screensaver.style.opacity = '1';
   }
   
   function displayNone() {
     screensaver.style.display = 'none';
   }
-  // Function to hide the screensaver
   function deactivateScreensaver() {
-    console.log("Deactivating screensaver"); // Debugging line
     screensaver.style.opacity = '0';
     resetTimer(); // Reset the timer when the screensaver is deactivated
   }
   
-  
-  // Resets the inactivity timer
+  // Resets the timer
   function resetTimer() {
-    console.log("Resetting timer"); // Debugging line
-    timer = setTimeout(displayFlex, 2000)
-    timer = setTimeout(activateScreensaver, 5000); // Set the time for 5 seconds for testing
+    timer = setTimeout(displayFlex, 19000)
+    timer = setTimeout(activateScreensaver, 20000);
 }
   
   // Adding back the screensaver click event listener
   screensaver.addEventListener('click', () => {
-    console.log("Click detected on screensaver, deactivating screensaver"); // Debugging line
     deactivateScreensaver();
     displayNone();
   });
   
-  // Initialize the timer when the page loads
   window.onload = resetTimer;
   

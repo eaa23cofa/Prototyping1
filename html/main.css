@@ -184,7 +184,7 @@ h1{
     height: 100%;
 }
 /* Reserve now button */
-.laundry-state-card button {
+.reserve-now {
     cursor: pointer;
     width: 132px;
     height: 43px;
@@ -246,42 +246,107 @@ h1{
     margin-bottom: 80px;
 }
 /* ---------- reservation page */
-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    text-align: center;
-    padding: 8px;
-  }
-  
-  /* For your colored cells */
-  td:nth-child(1) { background-color: red; } /* Adjusts the second cell in every row */
-  td:nth-child(2) { background-color: lightgreen; } /* Adjusts the first cell in every row */
-  td:nth-child(3) { background-color: lightgreen; }
-  td:nth-child(4) { background-color: lightgreen; }
-  td:nth-child(5) { background-color: lightgreen; }
-  td:nth-child(6) { background-color: lightgreen; }
-  td:nth-child(7) { background-color: lightgreen; }
-  
-  a {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-    padding: 15px 0; /* Adjust as needed */
-  }
-  
-  .header {
-    background-color: #003B6E; 
-    color: #fff; 
-    padding: 20px 20px; 
+.reservation-calender-header-container {
+    display: inline-flex;
+    justify-content: center;
+}
+.reservation-calender-header {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-  }
-  
-  .header-left, .header-right {
-    font-size: 18px; 
-  }
+    border-radius: 12px;
+    border: 1px solid var(--Stroke, #CCC);
+    padding: 0 25px;
+    margin-bottom: 20px;
+}
+.reserve-cal-header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+.reserve-cal-header-section:not(:last-child) {
+    padding-right: 70px;
+}
+.reserve-cal-header-section h3 {
+    margin: 0;
+}
+.calender-weekday {
+    font-size: 10px;
+    font-weight: 600;
+}
+.calender-date {
+    font-size: 25px;
+    font-weight: 700;
+}
+.calender-month {
+    font-size: 10px;
+    font-weight: 600;
+}
+.reservation-calender-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px 24px;
+    align-self: center;
+}
+.grid-item {
+    height: 100px;
+    width: 100px;
+    border: 1px solid var(--Stroke, #CCC);
+    border-radius: 12px;
+    background-color: var(--card-green);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.unavailable  {
+    background-color: var(--card-red);
+}
+/* reservation confirmation */
+.reservation-date {
+    margin: 90px 0 90px 32px;
+}
+.res-date-p {
+    margin: 0;
+    font-size: 16px;
+    
+}
+.nine {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.vertical-line {
+    background-color: black;
+    width: 100px;
+    height: 2px;
+    transform: rotate(90deg);
+}
+.reservation-info {
+    text-align: left;
+}
+.reservation-info h3 {
+    margin: 0 0 5px 0;
+}
+.reserve {
+    margin-right: 55px;
+    border-radius: 8px;
+    border: 1px solid var(--green, #69C147);
+    box-shadow: 0px 0px 5px 0px #69C147;
+    padding: 13px 0px;
+    width: 140px;
+    font-size: 15px;
+    font-weight: 700;
+    background: white;
+    text-align: center;
+    cursor: pointer;
+}
+.reserved {
+    border: 1px solid #F00;
+    box-shadow: 0px 0px 5px 0px #F00;
+}
