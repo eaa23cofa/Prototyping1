@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Poppins' ;
+    src: url('path/to/poppins.woff2');
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size:400%;
+}
+
+.heading-container {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    border: 1px solid lightgray;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+}
+
+#h2 {
+    text-align: center; 
+    align-self: center;
+    flex: 1;
+    font-size: 300%;
+    margin-right: 400px;
+        }
+
+
+h4 {
+    text-align:center;
+    color: black;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+
+p {
+    text-align: center;
+    color: black;
+    font-size: 170%;
+}
+
+.readMore{
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: bolder;
+    font-size: large;
+    stroke: lightgray;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 65px;
+    
+}
+
+#allEvents {
+    text-decoration-line: underline;
+    padding-left: 10px;
+    font-size: 200%;
+    cursor: pointer;
+}
+
+#Calendar {
+    font-size: 200%;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+
+.card {
+    width: 320px;
+    height: 600px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    margin: 10px 50px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    justify-content: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+}
+/* I added this. I put the image into the card in the html and fit in behind the content. */
+.card img {
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+}
+/* This is irrelevant now
+.card1 {
+    background-image: url(images1/253398\ copy.jpeg);
+    text-align:center;
+
+}
+.card2 {
+    background-image: url(images1/tiny-dorm-sessions\ copy.png);
+    text-align:center;
+}
+
+.card3 {
+    background-image: url(images1/image\ copy.jpg);
+    text-align:center;
+}
+
+.card4 {
+    background-image: url(images1/91afbe54-7c23-4d94-a4df-26266119268e~cr_0.0.837.561\ copy.webp);
+    text-align:center;
+ 
+} */
+
+
+
+button {
+    border-radius: 50px;
+    background-color: #CCDDFF;
+    border: none;
+    height: 100px;
+    width: 100px;
+    font-size: 35px;
+    align-items: center;
+    margin-right: 430px;
+    cursor: pointer;
+
+}

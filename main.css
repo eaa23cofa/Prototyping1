@@ -1,0 +1,275 @@
+/* ---------- reusable components */
+:root {
+    --primary-card: #CCDDFF;
+    --button-green: #69C147;
+    --card-green: #5CD66F;
+    --button-red: #FF0000;
+    --card-red: #E45656;
+}
+#screensaver {
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/screensaver.jpg");
+    color: white;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+#screensaver h1 {
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: 9.6px;
+    width: 100vw;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+#screensaver h2 {
+    font-size: 128px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+#screensaver p {
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: 400;
+    
+}
+.spacer {
+    flex-grow: 1;
+}
+body {
+    height: 100vh;;
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 40px;
+    padding: 0;
+}
+.laundry-hero {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.primary-button {
+    width: 242.06px;
+    height: 85.82px;
+    border-radius: 60px;
+    background-color: var(--primary-card);
+    border-style: none;
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.secondary-button {
+    width: 242.06px;
+    height: 85.82px;
+    background-color: white;
+    border-radius: 60px;
+    border: 2px solid var(--Stroke, #CCC);
+    font-size: 28px;
+    font-weight: 600;
+    margin-right: 36px;
+    cursor: pointer;
+}
+/* ---------- header and back-button wrapper */
+.header-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+}
+.back-button {
+    position: absolute;
+    left: 0;
+    width: 101px;
+}
+h1{
+    font-size: 64px;
+    font-weight: 700;
+}
+/* ---------- cards section */
+.cards-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.primary-card {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    width: 300px;
+    max-height: 200px;
+    border: 1px solid #D9D9D9;
+    text-align: center;
+    margin: 0 2%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.card-content {
+    margin: 0 10%;
+    height: 100%;
+}
+.card-content h3 {
+    font-weight: 600;
+}
+.card-icon {
+    height: 75px;
+    width: auto;
+    padding-bottom: 25px;
+}
+/* ---------- Laundry state  section */
+.state-cards-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.laundry-state-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 756px;
+    height: 153px;
+    border-radius: 12px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+.laundry-state-card:not(:last-child) {
+    margin-bottom: 18px;
+}
+.laundry-state-img {
+    background-color: var(--card-green);
+    border-radius: 6px;
+    width: 135px;
+    height: 135px;
+    margin-left: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.busy {
+    background-color: var(--card-red);
+}
+.laundry-state-card h3 {
+    margin-left: 28px;
+}
+.laundry-state-text {
+    margin-right: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 100%;
+}
+/* Reserve now button */
+.laundry-state-card button {
+    cursor: pointer;
+    width: 132px;
+    height: 43px;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid var(--Stroke, #CCC);
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+/* ---------- laundry confirmation modal */
+.confirmation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.confirmation-modal-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1146px;
+    height: 649px;
+    border-radius: 60px;
+}
+.modal-header {
+    margin-top: 100px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+.modal-header h2 {
+    margin: 0;
+}
+.modal-buttons {
+    margin-bottom: 120px;
+}
+/* ---------- success page */
+.checkmark {
+    width: 255px;
+    height: auto;
+}
+.success-h1 {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+/* ---------- reservation page */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  /* For your colored cells */
+  td:nth-child(1) { background-color: red; } /* Adjusts the second cell in every row */
+  td:nth-child(2) { background-color: lightgreen; } /* Adjusts the first cell in every row */
+  td:nth-child(3) { background-color: lightgreen; }
+  td:nth-child(4) { background-color: lightgreen; }
+  td:nth-child(5) { background-color: lightgreen; }
+  td:nth-child(6) { background-color: lightgreen; }
+  td:nth-child(7) { background-color: lightgreen; }
+  
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 15px 0; /* Adjust as needed */
+  }
+  

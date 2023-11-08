@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Laundry</title>
+</head>
+<body>
+<!-- screensaver div -->
+    <div id="screensaver">
+        <h1>Vilhelm Kiers Kollegium</h1>
+        <h2 id="screensaver-time"></h2>
+        <p id="screensaver-date"></p>
+        <img src="images/one-finger-tap.svg" alt="finger tab icon">
+    </div>
+
+    <section class="laundry-hero">
+       <section class="header-wrapper">
+        <div class="back-button">
+            <a href="laundry.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" fill="none">
+                    <circle cx="50.5" cy="50.5" r="50.5" fill="#CCDDFF"/>
+                    <path d="M55.847 32.6765L38.0234 50.5L55.847 68.3236" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+        <h1>LAUNDRY STATE</h1>
+       </section> 
+       <section class="state-cards-wrapper">
+        
+            <div class="laundry-state-card">
+                <div class="laundry-state-img">
+                    <img src="images/washer-white.png" alt="" class="img-card">
+                </div>
+                    <h3>Washing machine 1</h3>
+                    <div class="spacer"></div>
+                    <button class="reserve-now">Reserve now</button>
+                    <p class="laundry-state-text">Free</p>
+            </div>
+
+            <div class="laundry-state-card">
+                <div class="laundry-state-img busy">
+                    <img src="images/washer-white.png" alt="" class="img-card">
+                </div>
+                    <h3>Washing machine 2</h3>
+                    <div class="spacer"></div>
+                    <p class="laundry-state-text">Busy<br>30 minutes left</p>
+            </div>
+
+            <div class="laundry-state-card">
+                <div class="laundry-state-img">
+                    <img src="images/dryer.png" alt="" class="img-card">
+                </div>
+                    <h3>Dryer</h3>
+                    <div class="spacer"></div>
+                    <p class="laundry-state-text">Free</p>
+            </div>
+       </section>
+    </section>
+    <article class="confirmation-modal hidden">
+        <div class="confirmation-modal-content">
+            <div class="modal-header">
+                <h2>You're reserving machine 1<br> for 11:00-14:00</h2>
+            </div>
+            <div class="spacer"></div>
+            <div class="modal-buttons">
+                <button id="modal-close" class="secondary-button">
+                    Back
+                </button>
+                <button id="modal-confirm" class="primary-button">
+                    Confirm
+                </button>
+            </div>
+        </div>
+    </article>
+<script src="script.js"></script>
+</body>
+</html>
