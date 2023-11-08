@@ -273,3 +273,15 @@ table {
     padding: 15px 0; /* Adjust as needed */
   }
   
+  .header {
+    background-color: #003B6E; 
+    color: #fff; 
+    padding: 20px 20px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .header-left, .header-right {
+    font-size: 18px; 
+  }

@@ -1,31 +1,16 @@
 /*TOP BAR*/
-header {
-    background-color: #003B6E; /* Background color for the header */
-    color: #fff; /* Text color for the header */
-    padding: 10px;
+.header {
+    background-color: #003B6E; 
+    color: #fff; 
+    padding: 20px 20px; 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-}
-
-.logo img {
-    height: 50px;
-    margin-right: 10px; /* Add margin to separate logo and text */
-}
-
-.text h1 {
-    margin: 0;
-    flex-grow: 1; /* Allow the h1 to grow and take up remaining space */
-}
-
-.weather, .date-time {
-    font-size: 16px;
-}
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .header-left, .header-right {
+    font-size: 18px; 
+  }
 
 /*FONT*/
 @font-face {
