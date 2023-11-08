@@ -3,11 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
     <title>Document</title>
+    <style>
+        .header-left img {
+            width: 18px; 
+            height: auto; 
+            margin-right: 5px; /* Add some spacing between the image and the text */
+        }
+
+        .header-right img {
+            width: 45px; /* Set the width for the right header image */
+            height: auto; 
+            margin-right: 5px; /* Add some spacing between the image and the text */
+        }
+    </style>
 </head>
-
-<body> <h1>Facilities</h1>
-
+<body> 
     
+    <div class="header">
+        <div class="header-left">
+            <img src="images/logo.png" alt="Logo">
+            Vilhelm Kiers Kollegium
+        </div>
+        <div class="header-right">
+            <img src="images/weather.png" alt="Weather Icon">
+            Monday October 30th 11:25
+        </div>
+    </div>
+        
+    <h2>FACILITIES</h2>
+
+    <img src="images/back button.png" alt="Small Image" class="top-left-image">
+
+    <div class="flex-container2">
+        <a href="gym-page.html" class="item">
+            <div class="item-text">Gym</div>
+            <img src="images/gym.png" alt="Gym Image">
+        </a>
+        <div class="item">
+            <div class="item-text">Bar</div>
+            <img src="images/bar.png" alt="Bar Image">
+        </div>
+        <div class="item">
+            <div class="item-text">Office</div>
+            <img src="images/office.png" alt="Office Image">
+        </div>
+        <div class="item">
+            <div class="item-text">Laundry</div>
+            <img src="images/laundry.png" alt="Laundry Image">
+        </div>
+    </div>
+
 </body>
 </html>
+
