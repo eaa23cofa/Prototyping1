@@ -16,10 +16,17 @@ document.querySelectorAll(".reserve").forEach(function(element) {
         }
     })
 })
-//confirm and go to succes.html
-document.getElementById('confirm').addEventListener('click', function() {
-    window.location.href = "success.html"
-});
+
+
+//loading screen
+window.addEventListener('load', function() {
+    // When the page has loaded, hide the loading overlay
+    var loading = document.getElementById('loading');
+    loading.style.display = 'none';
+  });
+  
+
+
 
 // ---------- confirmation modal
 const modal = document.querySelector(".confirmation-modal")
@@ -36,15 +43,22 @@ backBtn.onclick = function() {
     modal.classList.toggle('hidden')
 }
 //close modal when clicking outside it
-window.addEventListener('click', function(event) {
-    if (event.target === modal) {
+window.addEventListener('click', function(outside) {
+    if (outside.target === modal) {
         modal.classList.toggle('hidden')
     }
 })
-//confirm and go to succes.html
-confirmBtn.addEventListener('click', function() {
+
+
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('confirm-button')) {
+        goToSuccess()
+    }
+})
+
+function goToSuccess() {
     window.location.href = "success.html"
-});
+}
 
 // ---------- Screensaver
 function updateDateTime() {
@@ -96,4 +110,6 @@ function activateScreensaver() {
   });
   
   window.onload = resetTimer;
+
+  
   
