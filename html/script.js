@@ -1,4 +1,4 @@
-//redirects to time reservation when clicking a button
+//redirects to machine reservation when clicking a grid item
 document.querySelectorAll(".grid-item").forEach(function(element) {
     element.onclick = function() {
         location.href = "reservation-confirmation.html"
@@ -10,20 +10,18 @@ document.querySelectorAll(".reserve").forEach(function(element) {
         this.classList.toggle("reserved")
 
         if (this.textContent === "RESERVE") {
-            this.textContent = "RESERVED";
+            this.textContent = "SELECTED";
         } else {
             this.textContent = "RESERVE";
         }
     })
 })
 
-
 //loading screen
+const loading = document.getElementById('loading');
 window.addEventListener('load', function() {
-    // When the page has loaded, hide the loading overlay
-    var loading = document.getElementById('loading');
     loading.style.display = 'none';
-  });
+});
   
 
 
@@ -55,9 +53,9 @@ document.addEventListener('click', function(event) {
         goToSuccess()
     }
 })
-
 function goToSuccess() {
     window.location.href = "success.html"
+    console.log('redirecting to success.html')
 }
 
 // ---------- Screensaver

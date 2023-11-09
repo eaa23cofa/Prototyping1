@@ -56,6 +56,34 @@ body {
     padding: 0;
 }
 
+.header {
+    background-color: #003B6E; 
+    color: #fff; 
+    padding: 20px 20px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    font-size: 18px;
+    
+}
+.header-left img {
+    width: 18px; 
+    height: auto; 
+    margin-right: 5px; /* Add some spacing between the image and the text */
+}
+
+.header-right img {
+    width: 45px; /* Set the width for the right header image */
+    height: auto; 
+    margin-right: 5px; /* Add some spacing between the image and the text */
+}
+  .header-left {
+    margin-left: 40px
+  }
+  .header-right {
+    margin-right: 40px;
+  }
+
 /* loading screen */
 #loading {
     position: fixed;
